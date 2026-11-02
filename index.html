@@ -23,6 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preload" as="image" href="nv-hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -36,7 +37,10 @@
       "name": "Newview Copacabana 437",
       "description": "Lançamento residencial em Copacabana com 98 unidades residenciais (studios, studios garden, double suítes e coberturas) e 2 lojas, ao lado do Copacabana Palace e a poucos passos da praia.",
       "numberOfAccommodationUnits": 98,
-      "audience": {"@type": "Audience", "audienceType": "Brasileiros que moram no exterior e investidores em imóveis para aluguel por temporada"},
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Brasileiros que moram no exterior e investidores em imóveis para aluguel por temporada"
+      },
       "image": "https://studioscopacabanansr437.com.br/nv-hero.webp",
       "address": {
         "@type": "PostalAddress",
@@ -46,25 +50,132 @@
         "addressCountry": "BR"
       },
       "containsPlace": [
-        {"@type": "Apartment", "name": "Studio", "floorSize": {"@type": "QuantitativeValue", "minValue": 33, "maxValue": 41, "unitCode": "MTK"}},
-        {"@type": "Apartment", "name": "Double Suíte", "floorSize": {"@type": "QuantitativeValue", "value": 71, "unitCode": "MTK"}}
+        {
+          "@type": "Apartment",
+          "name": "Studio",
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "minValue": 33,
+            "maxValue": 41,
+            "unitCode": "MTK"
+          }
+        },
+        {
+          "@type": "Apartment",
+          "name": "Double Suíte",
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 71,
+            "unitCode": "MTK"
+          }
+        }
       ]
     },
-    {"@type": "Offer", "name": "Studio – Newview Copacabana 437", "price": "1080000", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"},
-    {"@type": "Offer", "name": "Double Suíte – Newview Copacabana 437", "price": "1780000", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"},
-    {"@type": "RealEstateAgent", "name": "Felipe Farias", "areaServed": "Rio de Janeiro"},
+    {
+      "@type": "Offer",
+      "name": "Studio – Newview Copacabana 437",
+      "price": "1080000",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/PreOrder"
+    },
+    {
+      "@type": "Offer",
+      "name": "Double Suíte – Newview Copacabana 437",
+      "price": "1780000",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/PreOrder"
+    },
+    {
+      "@type": "RealEstateAgent",
+      "name": "Felipe Farias",
+      "areaServed": [
+        "Rio de Janeiro",
+        "Estados Unidos",
+        "Portugal",
+        "Reino Unido",
+        "Irlanda",
+        "Canadá",
+        "Espanha",
+        "Itália",
+        "Alemanha",
+        "Austrália"
+      ],
+      "knowsLanguage": "pt-BR"
+    },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "Moro fora do Brasil. Consigo comprar um apartamento em Copacabana?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Sim. Brasileiros que moram no exterior podem comprar normalmente, usando o próprio CPF. Todo o processo pode ser feito à distância, com assinatura digital ou por procuração."}},
-        {"@type": "Question", "name": "Preciso viajar ao Brasil para assinar o contrato?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Na maioria dos casos, não. Os documentos podem ser assinados digitalmente ou por procuração, que pode ser feita no consulado brasileiro mais próximo."}},
-        {"@type": "Question", "name": "Como funciona o pagamento?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Sinal de 13%, 10% em 30 parcelas mensais, 12% em 5 parcelas semestrais e saldo de 64,85% em junho de 2029, mais uma parcela final de 0,15% em dezembro de 2029."}},
-        {"@type": "Question", "name": "Posso alugar por temporada enquanto estou fora?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Os studios foram pensados para a alta demanda turística de Copacabana. A gestão da locação pode ser feita por empresas especializadas, sem você precisar estar no Rio. Consulte as regras do condomínio com nossa equipe."}}
+        {
+          "@type": "Question",
+          "name": "Moro fora do Brasil. Consigo comprar um apartamento em Copacabana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Brasileiros que moram no exterior podem comprar normalmente, usando o próprio CPF. Todo o processo pode ser feito à distância, com assinatura digital ou por procuração."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso viajar ao Brasil para assinar o contrato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na maioria dos casos, não. Os documentos podem ser assinados digitalmente ou por procuração, que pode ser feita no consulado brasileiro mais próximo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sinal de 13%, 10% em 30 parcelas mensais, 12% em 5 parcelas semestrais e saldo de 64,85% em junho de 2029, mais uma parcela final de 0,15% em dezembro de 2029."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso alugar por temporada enquanto estou fora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os studios foram pensados para a alta demanda turística de Copacabana. A gestão da locação pode ser feita por empresas especializadas, sem você precisar estar no Rio. Consulte as regras do condomínio com nossa equipe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Moro nos Estados Unidos, em Portugal ou na Europa. Como recebo a tabela e faço a visita?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pelo WhatsApp e por chamada de vídeo, no horário que for melhor para você. Você recebe a tabela de lançamento e tira as dúvidas sobre as unidades sem precisar vir ao Rio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso pagar com dinheiro que está no exterior?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O pagamento é em reais, e o dinheiro entra no Brasil por uma operação de câmbio formal, que deixa o investimento documentado. Você também pode pagar a partir de uma conta sua no Brasil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como recebo o aluguel morando fora e quanto pago de imposto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O aluguel cai na sua conta no Brasil. Quem fez a saída definitiva paga, em regra, 15% de Imposto de Renda sobre o aluguel, recolhido por um procurador no Brasil. Quem ainda declara como residente segue a tabela progressiva. Confirme o seu caso com um contador."
+          }
+        }
       ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Imóvel em Copacabana para brasileiros que moram no exterior",
+      "inLanguage": "pt-BR",
+      "url": "https://studioscopacabanansr437.com.br/",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Brasileiros que moram no exterior"
+      },
+      "about": {
+        "@type": "Place",
+        "name": "Copacabana, Rio de Janeiro"
+      }
     }
   ]
 }
@@ -127,6 +238,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(237,233,228,.92);backdro
 .dark .eyebrow{color:var(--grey)}
 .dark p{color:#CFCAC3}
 .dark::after{content:"";position:absolute;right:-120px;top:-40px;width:420px;height:140%;border-left:90px solid rgba(237,233,228,.06);border-radius:50%;pointer-events:none}
+.countries-lead{color:#CFCAC3;max-width:820px;font-size:1.08rem;margin-top:-6px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px}
 .three div{border-top:1px solid rgba(237,233,228,.2);padding-top:22px}
 @media(max-width:900px){.three{grid-template-columns:1fr}}
@@ -531,6 +643,7 @@ function trackEvent(meta, ga, params){
   <div class="wrap">
     <span class="eyebrow">Para quem ganha em outra moeda</span>
     <h2>Por que faz sentido investir em Copacabana morando fora.</h2>
+    <p class="countries-lead">Para brasileiros que moram nos Estados Unidos, em Portugal, no Reino Unido, na Irlanda, no Canadá, na Espanha, na Itália, na Alemanha, na Austrália ou em qualquer outro país e querem ter um imóvel no Rio de Janeiro.</p>
     <div class="three">
       <div><h3>Patrimônio no Brasil</h3><p>Um imóvel em um dos endereços mais valorizados do país, que você pode usar quando vier ao Rio ou deixar para a família.</p></div>
       <div><h3>Renda em reais</h3><p>Alugado por temporada, o studio gera renda no Brasil, que pode ajudar a pagar as parcelas e montar uma reserva aqui.</p></div>
@@ -771,6 +884,9 @@ function trackEvent(meta, ga, params){
     <details><summary>Preciso viajar ao Brasil para assinar o contrato?</summary><p>Na maioria dos casos, não. Os documentos podem ser assinados digitalmente ou por procuração, que pode ser feita no consulado brasileiro mais próximo.</p></details>
     <details><summary>Como funciona o pagamento?</summary><p>Sinal de 13%, 10% em 30 parcelas mensais, 12% em 5 parcelas semestrais e saldo de 64,85% em junho de 2029, mais uma parcela final de 0,15% em dezembro de 2029.</p></details>
     <details><summary>Posso alugar por temporada enquanto estou fora?</summary><p>Os studios foram pensados para a alta demanda turística de Copacabana. A gestão da locação pode ser feita por empresas especializadas, sem você precisar estar no Rio. Consulte as regras do condomínio com nossa equipe.</p></details>
+    <details><summary>Moro nos Estados Unidos, em Portugal ou na Europa. Como recebo a tabela e faço a visita?</summary><p>Pelo WhatsApp e por chamada de vídeo, no horário que for melhor para você. Você recebe a tabela de lançamento e tira as dúvidas sobre as unidades sem precisar vir ao Rio.</p></details>
+    <details><summary>Posso pagar com dinheiro que está no exterior?</summary><p>Sim. O pagamento é em reais, e o dinheiro entra no Brasil por uma operação de câmbio formal, que deixa o investimento documentado. Você também pode pagar a partir de uma conta sua no Brasil.</p></details>
+    <details><summary>Como recebo o aluguel morando fora e quanto pago de imposto?</summary><p>O aluguel cai na sua conta no Brasil. Quem fez a saída definitiva paga, em regra, 15% de Imposto de Renda sobre o aluguel, recolhido por um procurador no Brasil. Quem ainda declara como residente segue a tabela progressiva. Confirme o seu caso com um contador.</p></details>
     <details><summary>Quando é o lançamento?</summary><p>A convenção de lançamento está prevista para o final de novembro de 2026. Cadastre-se para receber a tabela e escolher sua unidade antes da abertura ao público.</p></details>
   </div>
 </section>
@@ -1080,6 +1196,18 @@ $("fontes").innerHTML='Fontes: coleta própria no <a href="'+AB+'" target="_blan
   btn.addEventListener("click",function(){ if(box.hidden) openS("estudo"); else closeS(); });
   cls.addEventListener("click",closeS); flt.addEventListener("click",closeS);
   document.querySelectorAll('a[href="#simulador"],a[href="#estudo"]').forEach(function(a){ a.addEventListener("click",function(e){ e.preventDefault(); openS(a.getAttribute("href").slice(1)); }); });
+})();
+
+/* eventos de engajamento para o Analytics */
+(function(){
+  var once={};
+  function fire(name,p){ if(once[name]) return; once[name]=1; trackEvent(name,name,p||{}); }
+  var sb=document.getElementById("studyBtn"); if(sb) sb.addEventListener("click",function(){ fire("abrir_estudo_rentabilidade"); });
+  document.querySelectorAll('a[href="#estudo"],a[href="#simulador"],a[href="#rentabilidade"]').forEach(function(a){ a.addEventListener("click",function(){ fire("abrir_estudo_rentabilidade",{origem:a.className||"link"}); }); });
+  ["sPreco","sAdr","sOcc"].forEach(function(id){ var el=document.getElementById(id); if(el) el.addEventListener("change",function(){ fire("usar_simulador"); }); });
+  document.querySelectorAll('a[href="#contato"]').forEach(function(a){ a.addEventListener("click",function(){ trackEvent("cta_tabela","cta_receber_tabela",{posicao:(a.closest("section,header,div")||{}).id||""}); }); });
+  ["hero-form","lead-form"].forEach(function(id){ var f=document.getElementById(id); if(f) f.addEventListener("focusin",function(){ fire("form_start_"+id,{form:id}); }); });
+  if("IntersectionObserver" in window){ var t=document.getElementById("valores"); if(t){ var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ fire("ver_valores"); io.disconnect(); } },{threshold:.15}); io.observe(t); } }
 })();
 </script>
 </body>
