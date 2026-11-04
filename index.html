@@ -695,9 +695,9 @@ function trackEvent(meta, ga, params){
     <div id="estudo" hidden>
     <div class="rent-block">
       <span class="eyebrow">Resultado</span>
-      <h3 class="rent-h">O que o studio rende no cenário Base</h3>
+      <h3 class="rent-h">O que o studio rende no cenário Otimista</h3>
       <div class="kpis kpis-light" id="kpis"></div>
-      <p class="rent-note">Cenário Base, unidade entregue, mobiliada e em operação, com gestora profissional. Valores em reais, antes do Imposto de Renda, salvo quando indicado.</p>
+      <p class="rent-note">Cenário Otimista, unidade entregue, mobiliada e em operação, com gestora profissional. Valores em reais, antes do Imposto de Renda, salvo quando indicado.</p>
     </div>
 
     <div class="rent-block">
@@ -717,8 +717,8 @@ function trackEvent(meta, ga, params){
       <p class="rent-lead" id="sazLead"></p>
       <div class="seg" id="segCen" role="group" aria-label="Cenário">
         <button type="button" aria-pressed="false" data-v="Conservador">Conservador</button>
-        <button type="button" aria-pressed="true" data-v="Base">Base</button>
-        <button type="button" aria-pressed="false" data-v="Otimista">Otimista</button>
+        <button type="button" aria-pressed="false" data-v="Base">Base</button>
+        <button type="button" aria-pressed="true" data-v="Otimista">Otimista</button>
       </div>
       <div class="months" id="months"></div>
       <div class="legend"><span><i class="lg-norm"></i>Dias comuns</span><span><i class="lg-ev"></i>Eventos e alta temporada</span></div>
@@ -726,7 +726,7 @@ function trackEvent(meta, ga, params){
 
     <div class="rent-block">
       <span class="eyebrow">As duas tipologias</span>
-      <h3 class="rent-h">Resultado de cada unidade no cenário Base</h3>
+      <h3 class="rent-h">Resultado de cada unidade no cenário Otimista</h3>
       <p class="rent-lead">Média entre anos com e sem Rock in Rio. O investimento total soma o preço de tabela, ITBI e cartório e a montagem completa da unidade.</p>
       <div class="seg" id="segGestU" role="group" aria-label="Gestão">
         <button type="button" aria-pressed="true" data-v="gestora">Com gestora (20%)</button>
@@ -744,8 +744,8 @@ function trackEvent(meta, ga, params){
           <div><div class="ctl-t">Unidade</div>
             <div class="seg" id="segUnid" role="group" aria-label="Unidade"><button type="button" aria-pressed="true" data-v="st">Studio 35 m²</button><button type="button" aria-pressed="false" data-v="ds">Double suíte 71 m²</button></div></div>
           <div><label for="sPreco">Preço da unidade <output id="oPreco"></output></label><input type="range" id="sPreco" min="900000" max="2200000" step="10000" value="1080000"></div>
-          <div><label for="sAdr">Diária em dias comuns <output id="oAdr"></output></label><input type="range" id="sAdr" min="200" max="1200" step="10" value="360"></div>
-          <div><label for="sOcc">Ocupação em dias comuns <output id="oOcc"></output></label><input type="range" id="sOcc" min="35" max="90" step="1" value="60"></div>
+          <div><label for="sAdr">Diária em dias comuns <output id="oAdr"></output></label><input type="range" id="sAdr" min="200" max="1200" step="10" value="400"></div>
+          <div><label for="sOcc">Ocupação em dias comuns <output id="oOcc"></output></label><input type="range" id="sOcc" min="35" max="90" step="1" value="68"></div>
           <div><div class="ctl-t">Gestão</div>
             <div class="seg" id="segGest" role="group" aria-label="Gestão"><button type="button" aria-pressed="true" data-v="gestora">Com gestora (20%)</button><button type="button" aria-pressed="false" data-v="auto">Autogestão</button></div></div>
           <div><div class="ctl-t">Onde você declara o Imposto de Renda</div>
@@ -1111,20 +1111,20 @@ var pct=function(v,d){return fmt(v*100,d==null?1:d)+"%";};
 function seg(id,fn){$(id).addEventListener("click",function(ev){var b=ev.target.closest("button");if(!b)return;$(id).querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b);});fn(b.dataset.v);});}
 
 /* ===== números principais ===== */
-var B=calc(CEN.Base), BD=calc(CEN.Base,GEST.gestora,UNID.ds);
+var B=calc(CEN.Otimista), BD=calc(CEN.Otimista,GEST.gestora,UNID.ds);
 var K=[
  [brl(B.mesL),"líquido por mês no studio de 35 m², com gestora",1],
  [brl(B.mesB),"receita bruta média por mês do studio"],
  [pct(B.occ,0),"ocupação média no ano, somando eventos e dias comuns"],
  [brl(BD.mesL),"líquido por mês na double suíte de 71 m²"],
  [fmt(B.mesL/tradLiq(UNID.st),1)+"x","o líquido do aluguel tradicional do mesmo studio"],
- [pct(tir10(CEN.Base,GEST.gestora,.05,UNID.st)),"retorno total ao ano em 10 anos, com valorização de 5% ao ano"]
+ [pct(tir10(CEN.Otimista,GEST.gestora,.05,UNID.st)),"retorno total ao ano em 10 anos, com valorização de 5% ao ano"]
 ];
-$("kpisTeaser").innerHTML=[[brl(B.mesB),"de receita bruta média por mês no studio, alugado por temporada",1],[fmt(B.mesL/tradLiq(UNID.st),1)+"x","o líquido do aluguel tradicional do mesmo studio"],[brl(REAL[4].med),"por noite no Réveillon, mediana do Airbnb perto do Copacabana Palace"]].map(function(k){return '<div class="kpi'+(k[2]?' main':'')+'"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>';}).join("");
+$("kpisTeaser").innerHTML=[[brl(B.mesB),"de receita bruta média por mês no studio, alugado por temporada (cenário Otimista)",1],[fmt(B.mesL/tradLiq(UNID.st),1)+"x","o líquido do aluguel tradicional do mesmo studio"],[brl(REAL[4].max),"por noite no Réveillon, a diária mais alta do Airbnb perto do Copacabana Palace"]].map(function(k){return '<div class="kpi'+(k[2]?' main':'')+'"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>';}).join("");
 $("kpis").innerHTML=K.map(function(k){return '<div class="kpi'+(k[2]?' main':'')+'"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>';}).join("");
 
 /* ===== diárias reais ===== */
-$("dates").innerHTML=REAL.map(function(d){return '<div class="date'+(d.peak?' peak':'')+'"><h4>'+d.nome+'</h4><div class="p">'+brl(d.med)+'</div><div class="r">mediana por noite<br>de <b>'+brl(d.min)+'</b> a <b>'+brl(d.max)+'</b><br>'+d.n+' anúncios · '+d.quando+'</div><a href="'+AB+'&checkin='+d.ci+'&checkout='+d.co+'" target="_blank" rel="noopener">Ver no Airbnb →</a></div>';}).join("");
+$("dates").innerHTML=REAL.map(function(d){return '<div class="date'+(d.peak?' peak':'')+'"><h4>'+d.nome+'</h4><div class="p"><small style="font-size:.5em;letter-spacing:.08em;text-transform:uppercase">até </small>'+brl(d.max)+'</div><div class="r">por noite, a diária mais alta<br>mediana <b>'+brl(d.med)+'</b> · a partir de <b>'+brl(d.min)+'</b><br>'+d.n+' anúncios · '+d.quando+'</div><a href="'+AB+'&checkin='+d.ci+'&checkout='+d.co+'" target="_blank" rel="noopener">Ver no Airbnb →</a></div>';}).join("");
 
 /* ===== sazonalidade ===== */
 function drawMonths(cn){
@@ -1134,12 +1134,12 @@ function drawMonths(cn){
   var top=ms.map(function(m,i){return [m.pico+m.norm,i];}).sort(function(a,b){return b[0]-a[0];});
   $("sazLead").textContent="Receita bruta esperada por mês do studio de 35 m², em reais. No cenário "+cn+", "+pct(r.recP/r.rec,0)+" da receita do ano vem do verão, do Réveillon, do Carnaval e dos eventos. "+MESES_L[top[0][1]].replace(/^./,function(c){return c.toUpperCase();})+" é o melhor mês, com "+brl(top[0][0])+"; "+MESES_L[top[11][1]]+" é o mais fraco, com "+brl(top[11][0])+". *Rock in Rio só nos anos pares; entra com metade do peso na média.";
 }
-seg("segCen",drawMonths); drawMonths("Base");
+seg("segCen",drawMonths); drawMonths("Otimista");
 
 /* ===== unidades ===== */
 function drawUnits(gk){
   var g=GEST[gk];
-  $("units").innerHTML=["st","ds"].map(function(k){var u=UNID[k],r=calc(CEN.Base,g,u),tr=tradLiq(u);
+  $("units").innerHTML=["st","ds"].map(function(k){var u=UNID[k],r=calc(CEN.Otimista,g,u),tr=tradLiq(u);
     return '<div class="unit"><h4>'+u.nome+'</h4><div class="big">'+brl(r.mesL)+'<small>por mês</small></div>'+
     '<div class="row"><span>Receita bruta por mês</span><b>'+brl(r.mesB)+'</b></div>'+
     '<div class="row"><span>Depois do IR de não residente (15%)</span><b>'+brl(r.mesIR)+'</b></div>'+
@@ -1162,7 +1162,7 @@ function sim(){
   $("rYield").textContent=pct(r.y); $("rInv").textContent=brl(r.inv); $("rOcc").textContent=pct(r.occ,0);
   $("rAdrM").textContent=brl(r.adr); $("rX").textContent=fmt(r.mesL/tr,1)+"x ("+brl(tr)+")";
 }
-seg("segUnid",function(v){S.u=v;var u=UNID[v];$("sPreco").value=u.preco;$("sAdr").value=Math.round(CEN.Base.adr*u.fator/10)*10;$("sOcc").value=60;sim();});
+seg("segUnid",function(v){S.u=v;var u=UNID[v];$("sPreco").value=u.preco;$("sAdr").value=Math.round(CEN.Otimista.adr*u.fator/10)*10;$("sOcc").value=68;sim();});
 seg("segGest",function(v){S.g=v;sim();}); seg("segIR",function(v){S.ir=v;sim();});
 ["sPreco","sAdr","sOcc"].forEach(function(id){$(id).addEventListener("input",sim);});
 sim();
@@ -1170,7 +1170,7 @@ sim();
 /* ===== comparação ===== */
 var tr=tradLiq(UNID.st), rows=[];
 ["Conservador","Base","Otimista"].forEach(function(cn){rows.push(["Temporada · "+cn+" · com gestora",calc(CEN[cn]).mesL,""]);});
-rows.push(["Temporada · Base · autogestão",calc(CEN.Base,GEST.auto).mesL,""]);
+rows.push(["Temporada · Otimista · autogestão",calc(CEN.Otimista,GEST.auto).mesL,""]);
 rows.push(["Aluguel tradicional",tr,"trad"]);
 var mx=Math.max.apply(null,rows.map(function(r){return r[1];}));
 $("compare").innerHTML=rows.map(function(r){return '<div class="cbar '+r[2]+'"><span>'+r[0]+'</span><div class="track"><i style="width:'+(Math.max(0,r[1])/mx*100).toFixed(1)+'%"></i></div><b>'+brl(r[1])+'</b></div>';}).join("");
