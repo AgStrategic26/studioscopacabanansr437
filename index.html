@@ -22,7 +22,8 @@
 <meta property="og:url" content="https://studioscopacabanansr437.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preload" as="image" href="nv-hero-praia.webp" fetchpriority="high">
+<link rel="preload" as="image" href="nv-hero-praia-hd.webp" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="nv-hero-praia-mob.webp" media="(max-width:700px)" fetchpriority="high">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +43,7 @@
         "@type": "Audience",
         "audienceType": "Brasileiros que moram no exterior e investidores em imóveis para aluguel por temporada"
       },
-      "image": "https://studioscopacabanansr437.com.br/nv-hero-praia.webp",
+      "image": "https://studioscopacabanansr437.com.br/nv-hero-praia-hd.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Avenida Nossa Senhora de Copacabana, 437",
@@ -226,6 +227,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(237,233,228,.92);backdro
 .nav a,.brand,.brand small{white-space:nowrap}
 .bar{gap:24px}
 @media(max-width:1340px){.nav{gap:18px}.nav a{font-size:.8rem;letter-spacing:.1em}.nav .btn{padding:11px 18px}}
+header .brand{font-size:1rem;letter-spacing:.16em}
+header .brand small{letter-spacing:.26em}
+@media(max-width:1500px){.nav{gap:16px}.nav a{font-size:.76rem;letter-spacing:.08em}}
+@media(max-width:1180px) and (min-width:701px){.nav a:not(.btn){display:none}}
 @media(max-width:1080px){.nav a:not(.btn){display:none}}
 .nav .btn{white-space:nowrap}
 @media(max-width:480px){.brand{font-size:1.05rem}.brand small{display:none}.nav .btn{padding:10px 16px;font-size:.72rem}}
@@ -334,8 +339,8 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 
 .hero-full{position:relative;min-height:min(88vh,780px);display:flex;align-items:flex-end;color:#fff;padding:0 0 36px;overflow:hidden}
 @media(max-width:560px){.hero-full{padding-bottom:28px}}
-.hero-bg{position:absolute;inset:0;background:url(nv-hero-praia.webp) center 45%/cover;}
-@media(max-width:700px){.hero-bg{background-size:auto 165%;background-position:40% 92%}}
+.hero-bg{position:absolute;inset:0;background:url(nv-hero-praia-hd.webp) center 45%/cover;}
+@media(max-width:700px){.hero-bg{background-image:url(nv-hero-praia-mob.webp);background-size:cover;background-position:center 35%}}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.25) 0%,rgba(18,17,16,.35) 40%,rgba(18,17,16,.8) 100%)}
 .hero-inner{position:relative;width:100%}
 .hero-grid2{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end}
@@ -528,6 +533,9 @@ footer p{margin-top:14px;max-width:820px}
   main>#projeto{order:5} main>#valores{order:6} main>#galeria{order:7} main>section.dark:not(#contato){order:8}
   main>#localizacao{order:9} main>#comprar-de-fora{order:10} main>#perguntas{order:11} main>#contato{order:12}
   main>.quote{display:none}
+  header .brand{font-size:.98rem;letter-spacing:.16em}
+  header .brand small{display:block!important;font-size:.56rem;letter-spacing:.24em}
+  header .nav .btn{display:none}
   h2{font-size:clamp(1.7rem,7.2vw,2.2rem)}
   .copa-intro{margin-bottom:28px;gap:22px}
   .copa-photo img{aspect-ratio:3/2!important}
@@ -577,7 +585,7 @@ function trackEvent(meta, ga, params){
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">QUADRA<small>COPA STUDIOS · NEWVIEW</small></a>
+    <a class="brand" href="#top">QUADRA COPA STUDIOS<small>NEWVIEW · COPACABANA</small></a>
     <nav class="nav">
       <a href="#copacabana">Copacabana</a>
       <a href="#rentabilidade">Rentabilidade</a>
