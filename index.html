@@ -384,6 +384,18 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .gal .g-big{grid-column:span 4;aspect-ratio:4/3}
 .gal .g-tall{grid-column:span 2}
 .gal figure:not(.g-wide):not(.g-hero){grid-column:span 2;aspect-ratio:4/3}
+.gal figure.g-q:not(.g-wide):not(.g-hero){grid-column:span 3}
+@media(max-width:760px){.gal figure.g-q:not(.g-wide):not(.g-hero){grid-column:span 2}}
+.gal .g-noite img{object-position:center 35%}
+.planta{margin:34px 0 0;background:#fff;border-radius:var(--radius);padding:18px;border:1px solid rgba(0,0,0,.08)}
+.planta img{width:100%;height:auto;display:block;border-radius:6px}
+.planta figcaption,.mapa figcaption{font-size:.92rem;color:var(--muted,#666);margin-top:10px;line-height:1.45}
+.planta b{color:var(--ink,#1c1c1c)}
+.split > div{min-width:0}
+.planta .pz,.mapa .pz{max-width:100%}
+.mapa{margin:34px 0 0}
+.mapa img{width:100%;height:auto;display:block}
+@media(max-width:700px){.planta{padding:10px}.planta .pz{overflow-x:auto;-webkit-overflow-scrolling:touch}.planta .pz img{width:820px;max-width:none}.mapa .pz{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)}.mapa .pz img{width:900px;max-width:none}}
 @media(max-width:760px){.gal{grid-template-columns:1fr 1fr}.gal .g-wide{grid-column:span 2;aspect-ratio:16/7}.gal .g-hero{grid-column:span 2;aspect-ratio:4/3}.gal .g-big{grid-column:span 2}.gal .g-tall{grid-column:span 2;aspect-ratio:1/1}.gal figure:not(.g-wide):not(.g-hero){grid-column:span 2;aspect-ratio:4/3}}
 @media(prefers-reduced-motion:reduce){.gal img{transition:none}}
 /* ===== Estudo de rentabilidade ===== */
@@ -696,9 +708,10 @@ function trackEvent(meta, ga, params){
     <div class="gal">
       <figure class="g-hero"><img src="nv-r-rooftop.webp" alt="Rooftop com piscina, espreguiçadeiras, bar e vista para os fogos do Réveillon em Copacabana" loading="lazy" decoding="async" width="2000" height="1125"><figcaption>Rooftop com piscina</figcaption></figure>
       <figure class="g-wide"><img src="nv-r-panorama.webp" alt="Studio integrado com varanda, cama, sofá, cozinha com bancada e vista para o morro" loading="lazy" decoding="async" width="2000" height="543"><figcaption>Studio com varanda</figcaption></figure>
-      <figure><img src="nv-r-studio.webp" alt="Studio decorado com painel de madeira, cama de casal, quadros do calçadão de Copacabana e cozinha integrada" loading="lazy" decoding="async" width="1400" height="1062"><figcaption>Studio decorado</figcaption></figure>
-      <figure><img src="nv-r-fitness.webp" alt="Espaço fitness com esteira, bicicleta e vista para o jardim" loading="lazy" decoding="async" width="1200" height="865"><figcaption>Fitness</figcaption></figure>
-      <figure><img src="nv-r-gourmet.webp" alt="Espaço gourmet com mesa redonda, bancada e churrasqueira" loading="lazy" decoding="async" width="1200" height="858"><figcaption>Espaço gourmet</figcaption></figure>
+      <figure class="g-q g-noite"><img src="nv-fachada-noite.webp" alt="Fachada do Quadra Copa Studios à noite, com varandas de madeira iluminadas e faixas brancas onduladas" loading="lazy" decoding="async" width="640" height="654"><figcaption>Fachada à noite</figcaption></figure>
+      <figure class="g-q"><img src="nv-r-studio.webp" alt="Studio decorado com painel de madeira, cama de casal, quadros do calçadão de Copacabana e cozinha integrada" loading="lazy" decoding="async" width="1400" height="1062"><figcaption>Studio decorado</figcaption></figure>
+      <figure class="g-q"><img src="nv-r-fitness.webp" alt="Espaço fitness com esteira, bicicleta e vista para o jardim" loading="lazy" decoding="async" width="1200" height="865"><figcaption>Fitness</figcaption></figure>
+      <figure class="g-q"><img src="nv-r-gourmet.webp" alt="Espaço gourmet com mesa redonda, bancada e churrasqueira" loading="lazy" decoding="async" width="1200" height="858"><figcaption>Espaço gourmet</figcaption></figure>
     </div>
     <p class="swipe" aria-hidden="true">Arraste para o lado →</p>
     <p class="note">Imagens ilustrativas do empreendimento.</p>
@@ -881,6 +894,7 @@ function trackEvent(meta, ga, params){
           </tbody>
         </table>
       </div>
+      <figure class="planta"><div class="pz"><img src="nv-planta-studio.webp" alt="Planta do studio: entrada com circulação, banheiro, cozinha integrada, sala com mesa e sofá, área da cama e varanda" loading="lazy" decoding="async" width="1940" height="402"></div><p class="swipe" aria-hidden="true">Arraste para ver tudo →</p><figcaption><b>Planta do studio · unidades 401 a 1201</b> · área privativa de 41,38 m². Banheiro, cozinha integrada, sala, área de dormir e varanda. Planta ilustrativa; móveis e decoração não estão incluídos.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -934,6 +948,7 @@ function trackEvent(meta, ga, params){
         <li>Restaurantes, cafés, mercados e farmácias na porta</li>
       </ul>
     </div>
+    <figure class="mapa"><div class="pz"><img src="nv-mapa-aereo.webp" alt="Vista aérea de Copacabana com o endereço 437 marcado na Avenida Nossa Senhora de Copacabana, entre a Rua Paula Freitas e a Rua República do Peru, perto do Copacabana Palace, do metrô e da praia" loading="lazy" decoding="async" width="2000" height="675"></div><p class="swipe" aria-hidden="true">Arraste para ver tudo →</p><figcaption>Vista aérea com o 437 marcado: entre a Rua Paula Freitas e a Rua República do Peru, a uma quadra da Avenida Atlântica e da praia, com o Copacabana Palace e o metrô ao lado. Imagem ilustrativa.</figcaption></figure>
   </div>
 </section>
 
