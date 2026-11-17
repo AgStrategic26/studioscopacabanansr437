@@ -59,7 +59,7 @@
           "name": "Studio",
           "floorSize": {
             "@type": "QuantitativeValue",
-            "minValue": 35,
+            "minValue": 33.69,
             "maxValue": 41.38,
             "unitCode": "MTK"
           }
@@ -284,7 +284,7 @@ header .brand small{letter-spacing:.26em}
 @media(max-width:560px){.quote{padding:72px 0;background-size:100% 100%,340px 136px}}
 
 .split{display:grid;grid-template-columns:280px 1fr;gap:56px}
-.split .side{border-radius:var(--radius);background:url(nv-fachada-437.webp) center 30%/cover;min-height:520px}
+.split .side{border-radius:var(--radius);background:url(nv-b-fachada-frontal.webp) center 35%/cover;min-height:520px}
 .specs{display:grid;grid-template-columns:1fr 1fr;gap:28px 44px;margin-top:10px}
 .specs dt{font-family:"Jost";font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.86rem;color:var(--muted)}
 .specs dd{font-size:1.1rem;margin-top:4px}
@@ -387,6 +387,13 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .gal figure.g-q:not(.g-wide):not(.g-hero){grid-column:span 3}
 @media(max-width:760px){.gal figure.g-q:not(.g-wide):not(.g-hero){grid-column:span 2}}
 .gal .g-noite img{object-position:center 35%}
+.gal .g-top img{object-position:center 25%}
+.pl-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 0}
+.pl-tabs button{font:inherit;font-size:.85rem;border:1px solid rgba(0,0,0,.18);background:transparent;color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;letter-spacing:.02em}
+.pl-tabs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pl-tabs + .planta{margin-top:14px}
+@media(max-width:700px){.specs .spec-extra{display:none}}
+@media(max-width:700px){.pl-tabs{flex-wrap:nowrap;overflow-x:auto;margin-left:-24px;margin-right:-24px;padding:0 24px 4px;scrollbar-width:none}.pl-tabs::-webkit-scrollbar{display:none}.pl-tabs button{flex:0 0 auto}}
 .planta{margin:34px 0 0;background:#fff;border-radius:var(--radius);padding:18px;border:1px solid rgba(0,0,0,.08)}
 .planta img{width:100%;height:auto;display:block;border-radius:6px}
 .planta figcaption,.mapa figcaption{font-size:.92rem;color:var(--muted,#666);margin-top:10px;line-height:1.45}
@@ -583,6 +590,9 @@ footer p{margin-top:14px;max-width:820px}
   .cookies .btn{padding:9px 18px}
 }
 @media(min-width:701px){.swipe{display:none}}
+
+.dois > div{min-width:0}
+.specs dd{overflow-wrap:anywhere}
 </style>
 <!-- ===== TAGS DE RASTREAMENTO (trocar os IDs) ===== -->
 <script>
@@ -641,7 +651,7 @@ function trackEvent(meta, ga, params){
 
 <div class="facts-bar">
   <div class="wrap facts">
-    <div><strong>35 a 41,38 m²</strong><span>studios</span></div>
+    <div><strong>33,69 a 41,38 m²</strong><span>studios</span></div>
     <div><strong>Administração</strong><span>profissional da sua unidade</span></div>
     <div><strong>100%</strong><span>compra à distância</span></div>
   </div>
@@ -661,19 +671,19 @@ function trackEvent(meta, ga, params){
       <article>
         <span class="big">Réveillon</span>
         <h3>A maior virada do mundo</h3>
-        <p>Milhões de pessoas na areia todo 31 de dezembro. É a data em que hotéis e apartamentos de temporada de Copacabana lotam com meses de antecedência.</p>
+        <p>Mais de 2,6 milhões de pessoas na areia no Réveillon. É a data em que hotéis e apartamentos de temporada de Copacabana lotam com meses de antecedência.</p>
         <a class="card-link" href="#estudo">Quanto rende o seu studio <span aria-hidden="true">→</span></a>
       </article>
       <article>
         <span class="big">Shows</span>
         <h3>O palco do Rio</h3>
-        <p>A praia recebe os maiores shows gratuitos do país, com público de mais de 2 milhões de pessoas. Cada grande evento movimenta o aluguel de curta temporada no bairro.</p>
+        <p>A praia recebe os maiores shows gratuitos do país: 2,1 milhões de pessoas no show da Lady Gaga e 1,6 milhão no da Madonna. Cada grande evento movimenta o aluguel de curta temporada no bairro.</p>
         <a class="card-link" href="#estudo">Quanto rende o seu studio <span aria-hidden="true">→</span></a>
       </article>
       <article>
         <span class="big">Ano todo</span>
         <h3>Demanda que não para</h3>
-        <p>Carnaval, férias de verão, turistas estrangeiros, congressos e quem vem visitar a família. Copacabana tem hóspede em todos os meses do calendário.</p>
+        <p>O Rio recebeu mais de 12,5 milhões de turistas em 2025 e mais de 1,6 milhão de estrangeiros só nos 8 primeiros meses de 2026. Copacabana tem hóspede em todos os meses do calendário.</p>
         <a class="card-link" href="#estudo">Quanto rende o seu studio <span aria-hidden="true">→</span></a>
       </article>
       <article>
@@ -684,7 +694,7 @@ function trackEvent(meta, ga, params){
       <article>
         <span class="big">Metrô</span>
         <h3>Tudo perto, sem carro</h3>
-        <p>Metrô a poucos minutos a pé, com acesso direto a Ipanema, Leblon e Centro. Comércio, restaurantes e farmácias em cada esquina.</p>
+        <p>Estação Cardeal Arcoverde do metrô a 6 minutos a pé, com acesso direto a Ipanema, Leblon e Centro. Comércio, restaurantes e farmácias em cada esquina.</p>
       </article>
       <article>
         <span class="big">Raro</span>
@@ -706,15 +716,22 @@ function trackEvent(meta, ga, params){
     <span class="eyebrow">Galeria</span>
     <h2>Compactos, bem resolvidos, prontos para alugar.</h2>
     <div class="gal">
-      <figure class="g-hero"><img src="nv-r-rooftop.webp" alt="Rooftop com piscina, espreguiçadeiras, bar e vista para os fogos do Réveillon em Copacabana" loading="lazy" decoding="async" width="2000" height="1125"><figcaption>Rooftop com piscina</figcaption></figure>
-      <figure class="g-wide"><img src="nv-r-panorama.webp" alt="Studio integrado com varanda, cama, sofá, cozinha com bancada e vista para o morro" loading="lazy" decoding="async" width="2000" height="543"><figcaption>Studio com varanda</figcaption></figure>
-      <figure class="g-q g-noite"><img src="nv-fachada-noite.webp" alt="Fachada do Quadra Copa Studios à noite, com varandas de madeira iluminadas e faixas brancas onduladas" loading="lazy" decoding="async" width="640" height="654"><figcaption>Fachada à noite</figcaption></figure>
-      <figure class="g-q"><img src="nv-r-studio.webp" alt="Studio decorado com painel de madeira, cama de casal, quadros do calçadão de Copacabana e cozinha integrada" loading="lazy" decoding="async" width="1400" height="1062"><figcaption>Studio decorado</figcaption></figure>
-      <figure class="g-q"><img src="nv-r-fitness.webp" alt="Espaço fitness com esteira, bicicleta e vista para o jardim" loading="lazy" decoding="async" width="1200" height="865"><figcaption>Fitness</figcaption></figure>
-      <figure class="g-q"><img src="nv-r-gourmet.webp" alt="Espaço gourmet com mesa redonda, bancada e churrasqueira" loading="lazy" decoding="async" width="1200" height="858"><figcaption>Espaço gourmet</figcaption></figure>
+      <figure class="g-hero"><img src="nv-b-bar-piscina.webp" alt="Rooftop com piscina e bar da piscina, com os fogos do Réveillon de Copacabana ao fundo" loading="lazy" decoding="async" width="1893" height="1326"><figcaption>Bar da piscina · rooftop</figcaption></figure>
+      <figure><img src="nv-b-piscina.webp" alt="Piscina do rooftop com espreguiçadeiras, guarda-sóis e vista para o Corcovado e os morros" loading="lazy" decoding="async" width="1893" height="1326"><figcaption>Piscina</figcaption></figure>
+      <figure class="g-top"><img src="nv-b-fachada-frontal.webp" alt="Fachada frontal com linhas sinuosas brancas inspiradas no calçadão de Copacabana" loading="lazy" decoding="async" width="1156" height="1326"><figcaption>Fachada frontal</figcaption></figure>
+      <figure><img src="nv-b-lounge.webp" alt="Lounge coberto no rooftop, com sofás, poltronas e mesa de centro" loading="lazy" decoding="async" width="1600" height="1121"><figcaption>Lounge coberto</figcaption></figure>
+      <figure><img src="nv-b-sauna.webp" alt="Sauna a vapor com porta de vidro aberta para o solarium" loading="lazy" decoding="async" width="1421" height="1326"><figcaption>Sauna a vapor</figcaption></figure>
+      <figure class="g-top"><img src="nv-b-acesso-lojas.webp" alt="Acesso residencial e lojas no térreo, com árvore na calçada" loading="lazy" decoding="async" width="1277" height="1326"><figcaption>Acesso e lojas</figcaption></figure>
+      <figure><img src="nv-b-lobby.webp" alt="Lobby com poltronas curvas, luminária escultural e balcão de recepção em pedra" loading="lazy" decoding="async" width="1600" height="1121"><figcaption>Lobby</figcaption></figure>
+      <figure><img src="nv-b-coworking.webp" alt="Coworking com bancada de trabalho, estantes de madeira e jardim vertical" loading="lazy" decoding="async" width="1600" height="1121"><figcaption>Coworking</figcaption></figure>
+      <figure><img src="nv-b-academia.webp" alt="Academia com esteiras, bicicleta, halteres e vista para o jardim" loading="lazy" decoding="async" width="1600" height="945"><figcaption>Academia</figcaption></figure>
+      <figure><img src="nv-b-fitness-externo.webp" alt="Fitness externo ao ar livre, com tapetes de treino e jardim" loading="lazy" decoding="async" width="1600" height="1121"><figcaption>Fitness externo</figcaption></figure>
+      <figure class="g-top"><img src="nv-b-fachada-varandas.webp" alt="Detalhe da fachada com varandas de madeira e faixas brancas onduladas" loading="lazy" decoding="async" width="1186" height="1326"><figcaption>Fachada</figcaption></figure>
+      <figure><img src="nv-b-studio-401.webp" alt="Studio 401 decorado, com cama de casal, painel de madeira, armário de vidro e mesa" loading="lazy" decoding="async" width="1462" height="1326"><figcaption>Studio 401</figcaption></figure>
+      <figure><img src="nv-b-studio-garden-306.webp" alt="Studio garden 306 com sofá, armário de vidro iluminado e janela para a área arborizada" loading="lazy" decoding="async" width="1536" height="1326"><figcaption>Studio garden 306</figcaption></figure>
     </div>
     <p class="swipe" aria-hidden="true">Arraste para o lado →</p>
-    <p class="note">Imagens ilustrativas do empreendimento.</p>
+    <p class="note">Perspectivas oficiais do book do empreendimento, meramente ilustrativas.</p>
   </div>
 </section>
 
@@ -866,7 +883,7 @@ function trackEvent(meta, ga, params){
 
 <section id="projeto">
   <div class="wrap split">
-    <div class="side" role="img" aria-label="Fachada do Quadra Copa Studios na Avenida Nossa Senhora de Copacabana, 437, com varandas de madeira, faixas brancas onduladas e árvores na calçada"></div>
+    <div class="side" role="img" aria-label="Fachada frontal do Quadra Copa Studios, com linhas sinuosas brancas inspiradas no calçadão de Copacabana e varandas iluminadas"></div>
     <div>
       <span class="eyebrow">O projeto</span>
       <h2>Quadra Copa Studios</h2>
@@ -874,27 +891,33 @@ function trackEvent(meta, ga, params){
         <div><dt>Endereço</dt><dd>Av. Nossa Senhora de Copacabana, 437, Copacabana, Rio de Janeiro</dd></div>
         <div><dt>Realização e incorporação</dt><dd>Newview</dd></div>
         <div><dt>Total de unidades</dt><dd>100 (98 residenciais e 2 lojas de 30,06 m²)</dd></div>
-        <div><dt>Pavimentos</dt><dd>Térreo, 13 pavimentos tipo e PUC (uso comum e unidades)</dd></div>
-        <div><dt>Arquitetura</dt><dd>Bassan Arquitetura</dd></div>
-        <div><dt>Fachada e interiores</dt><dd>FEU Arquitetura</dd></div>
+        <div><dt>Unidades</dt><dd>Do 1º ao 15º pavimento, com studios, studios garden, double suítes e coberturas de 33,69 a 71,83 m²</dd></div>
+        <div><dt>Arquitetura</dt><dd>Bassan Arquitetura (Flavio Bassan)</dd></div>
+        <div><dt>Fachada</dt><dd>FEU</dd></div>
+        <div><dt>Interiores</dt><dd>FEU Singular (Julia Feu)</dd></div>
         <div><dt>Elevadores</dt><dd>2</dd></div>
-        <div><dt>Lazer</dt><dd>Rooftop com piscina, fitness e espaço gourmet</dd></div>
-        <div><dt>Térreo</dt><dd>Acesso, lojas, uso comum e unidades residenciais</dd></div>
+        <div><dt>Lazer no rooftop</dt><dd>Piscina, bar da piscina, sauna a vapor, lounge coberto e solarium</dd></div>
+        <div><dt>Térreo</dt><dd>Lobby, coworking, academia, fitness externo, minimercado, delivery e bicicletário, além das 2 lojas</dd></div>
+        <div class="spec-extra"><dt>Diferenciais</dt><dd>Lavanderia, espaço delivery e maleiro, fechadura eletrônica nos apartamentos, CFTV, alarmes e sensores de periferia, infraestrutura para carregar bicicleta elétrica</dd></div>
+        <div class="spec-extra"><dt>Ar-condicionado</dt><dd>Infraestrutura para split nos studios (aparelhos por conta do comprador); áreas comuns entregues climatizadas</dd></div>
+        <div class="spec-extra"><dt>Sustentabilidade</dt><dd>Coleta seletiva, medidores de água individuais, torneiras com temporizador e sensores de iluminação nas áreas comuns</dd></div>
+        <div class="spec-extra"><dt>Aprovação</dt><dd>Projeto legal aprovado na Prefeitura do Rio (nº 000250.000203/2026-00) e memorial de incorporação prenotado sob o nº 723107 no 5º Ofício de Registro de Imóveis</dd></div>
       </dl>
       <p style="margin:0 0 18px"><a href="/quadra-copa-studios/">Tudo sobre o Quadra Copa Studios →</a></p>
       <div class="table-scroll">
         <table>
           <thead><tr><th>Tipologia</th><th>Unidades</th><th>Metragem</th></tr></thead>
           <tbody>
-            <tr><td>Studio</td><td>72</td><td>35 a 41,38 m²</td></tr>
-            <tr><td>Studio garden</td><td>6</td><td>41 a 49 m²</td></tr>
-            <tr><td>Double suíte</td><td>10</td><td>71 m²</td></tr>
-            <tr><td>Cobertura 14º pavimento</td><td>8</td><td>33 a 41 m²</td></tr>
-            <tr><td>Cobertura 15º pavimento</td><td>2</td><td>68 e 71 m²</td></tr>
+            <tr><td>Studio</td><td>72</td><td>33,69 a 41,38 m²</td></tr>
+            <tr><td>Studio garden (com terraço)</td><td>6</td><td>41,24 a 49,83 m²</td></tr>
+            <tr><td>Double suíte</td><td>10</td><td>71,83 m²</td></tr>
+            <tr><td>Cobertura studio · 14º pavimento</td><td>8</td><td>33,69 a 41,38 m²</td></tr>
+            <tr><td>Cobertura double suíte · 15º pavimento</td><td>2</td><td>68,97 e 71,66 m²</td></tr>
           </tbody>
         </table>
       </div>
-      <figure class="planta"><div class="pz"><img src="nv-planta-studio.webp" alt="Planta do studio: entrada com circulação, banheiro, cozinha integrada, sala com mesa e sofá, área da cama e varanda" loading="lazy" decoding="async" width="1940" height="402"></div><p class="swipe" aria-hidden="true">Arraste para ver tudo →</p><figcaption><b>Planta do studio · unidades 401 a 1201</b> · área privativa de 41,38 m². Banheiro, cozinha integrada, sala, área de dormir e varanda. Planta ilustrativa; móveis e decoração não estão incluídos.</figcaption></figure>
+      <div class="pl-tabs" role="group" aria-label="Escolha a planta"><button type="button" aria-pressed="true" data-src="nv-planta-studio-401.webp" data-h="375" data-t="Studio 401 a 1201" data-m="41,38" data-alt="Studio de frente: banheiro, cozinha, mesa, sala, cama e varanda">Studio 401–1201 · 41,38 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-studio-402.webp" data-h="371" data-t="Studio 402 a 1202" data-m="37,86" data-alt="Studio com banheiro, cozinha integrada, sala, cama e varanda">Studio 402–1202 · 37,86 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-studio-404.webp" data-h="344" data-t="Studio 404 a 1204" data-m="40,32" data-alt="Studio com banheiro, cozinha integrada, sala, cama e varanda">Studio 404–1204 · 40,32 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-studio-406.webp" data-h="399" data-t="Studio 406 a 1206" data-m="35,32" data-alt="Studio com banheiro, cozinha integrada, sala, cama e varanda">Studio 406–1206 · 35,32 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-studio-407.webp" data-h="399" data-t="Studio 407 a 1207" data-m="40,29" data-alt="Studio com banheiro, cozinha integrada, sala, cama e varanda">Studio 407–1207 · 40,29 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-double-405.webp" data-h="744" data-t="Double suíte 405 a 1205" data-m="71,83" data-alt="Double suíte com duas suítes independentes, cada uma com banheiro, cozinha e varanda">Double suíte 405 a 1205 · 71,83 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-garden-308.webp" data-h="331" data-t="Studio garden 308" data-m="49,83" data-alt="Studio garden com terraço descoberto, sala, cama, cozinha e banheiro">Studio garden 308 · 49,83 m²</button><button type="button" aria-pressed="false" data-src="nv-planta-cobertura-1501.webp" data-h="652" data-t="Cobertura double suíte 1501" data-m="71,66" data-alt="Cobertura double suíte com duas suítes e terraços descobertos">Cobertura double suíte 1501 · 71,66 m²</button></div>
+      <figure class="planta"><div class="pz"><img id="plImg" src="nv-planta-studio-401.webp" alt="Planta: Studio de frente: banheiro, cozinha, mesa, sala, cama e varanda" loading="lazy" decoding="async" width="1800" height="375"></div><p class="swipe" aria-hidden="true">Arraste para ver tudo →</p><figcaption><b id="plCap">Studio 401 a 1201 · área privativa de 41,38 m²</b> · Plantas oficiais do book do empreendimento. Imagens ilustrativas; móveis e decoração não estão incluídos.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -907,7 +930,7 @@ function trackEvent(meta, ga, params){
       <div class="card">
         <div class="from">Studio · linha de tabela</div>
         <div class="price">R$ 1.080.000</div>
-        <div class="size">Studios de 35 a 41,38 m²</div>
+        <div class="size">Studios de 33,69 a 41,38 m²</div>
         <ul class="plan">
           <li><span>Sinal (13%)</span><span>R$ 140.400</span></li>
           <li><span>30 mensais a partir de dez/2026 (10%)</span><span>30 × R$ 3.600</span></li>
@@ -942,9 +965,9 @@ function trackEvent(meta, ga, params){
       <h2>No coração de Copacabana.</h2>
       <p>Avenida Nossa Senhora de Copacabana, 437, entre a Rua Paula Freitas e a Rua República do Peru. Da portaria até a areia é uma caminhada curta.</p>
       <ul class="ticks">
-        <li>Junto ao Copacabana Palace</li>
+        <li>A poucos passos do Copacabana Palace</li>
         <li>A poucos passos da praia e da Avenida Atlântica</li>
-        <li>Metrô próximo, com acesso direto a Ipanema, Leblon e Centro</li>
+        <li>Estação Cardeal Arcoverde do metrô a 6 minutos a pé</li>
         <li>Restaurantes, cafés, mercados e farmácias na porta</li>
       </ul>
     </div>
@@ -1328,6 +1351,11 @@ $("fontes").innerHTML='Fontes: coleta própria no <a href="'+AB+'" target="_blan
   document.getElementById('aceitaCookies').onclick=function(){ salva('sim'); carregaGA(); };
   document.getElementById('recusaCookies').onclick=function(){ salva('nao'); };
 })();
+</script>
+<script>
+(function(){var g=document.querySelector('.pl-tabs');if(!g)return;var im=document.getElementById('plImg'),cap=document.getElementById('plCap');
+g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+im.src=b.dataset.src;im.height=+b.dataset.h;im.alt='Planta: '+b.dataset.alt;cap.textContent=b.dataset.t+' · área privativa de '+b.dataset.m+' m²';var pz=im.parentNode;if(pz)pz.scrollLeft=0;});})();
 </script>
 </body>
 </html>
