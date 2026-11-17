@@ -366,6 +366,9 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .hero-full .eyebrow{color:#EDE9E4}
 .hero-copy .eyebrow,.hero-copy h1,.hero-copy .hero-sub,.hero-copy .hero-price{text-shadow:0 1px 14px rgba(0,0,0,.5)}
 .hero-full h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:400;max-width:900px;text-wrap:balance}
+.hero-full h1 .h1-nome{display:block;white-space:nowrap;font-size:min(4.4rem,9vw)}
+.hero-full h1 .h1-sub{display:block;font-size:min(2.6rem,5vw);margin-top:.25em;line-height:1.15}
+@media(min-width:701px){.hero-full h1 .h1-nome{font-size:min(4.6rem,6vw)}.hero-full h1 .h1-sub{font-size:min(2.6rem,2.7vw)}}
 .hero-sub{font-size:1.3rem;margin:18px 0 32px;color:#F3F0EC;max-width:620px}
 .hero-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:-14px 0 30px;color:#fff}
 .hero-price span{font-family:"Jost";font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:#EDE9E4}
@@ -641,7 +644,7 @@ function trackEvent(meta, ga, params){
   <div class="wrap hero-inner hero-grid2">
     <div class="hero-copy">
     <span class="eyebrow">Para quem mora fora do Brasil</span>
-    <h1>Quadra Copa Studios: seu endereço em Copacabana</h1>
+    <h1><span class="h1-nome">Quadra Copa Studios</span><span class="h1-sub">seu endereço em Copacabana</span></h1>
     <p class="hero-sub">Studios próximos ao Copacabana Palace, a poucos passos da praia.</p>
     <p class="hero-price"><span>A partir de</span> <strong>R$ 1.080.000</strong></p>
     <div class="hero-ctas">
